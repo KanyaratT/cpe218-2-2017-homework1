@@ -51,9 +51,19 @@ public class Homework1 {
 		
 		a="";
 		inorder(n) ;
+
+		// To check if node is non-root so delete 1 pair bracelet ;
+		if(n.dad != null){
+			String temp = a ;
+			a = temp.charAt(1)+"";
+			for (int i=2 ; i < temp.length()-1 ; i++)
+				a += temp.charAt(i) ;
+		}
+
 		System.out.println("=" + calculate(n) );
 		a += "=" ;
 		a += calculate(n) ;
+
 		//System.out.println(a);
 			return a;
 	}
